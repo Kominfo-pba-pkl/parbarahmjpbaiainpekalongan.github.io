@@ -17,6 +17,12 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/g_style.css" rel="stylesheet" />
+
+        <!-- You can also include your own CSS styles -->
+        <style>
+        form { margin: 40px auto; }
+        input { display:inline-block; margin: 20px; }
+        </style>
     </head>
     <body>
         <!-- Navigation-->
@@ -30,19 +36,27 @@
               <div class="collapse navbar-collapse" id="navbarsExample07">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pendaftaran.html" target="blank">Pendaftaran</a>
+                    <a class="nav-link" href="#">Pendaftaran</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="bukupanduan.html" target="blank">Buku Panduan</a>
+                    <a class="nav-link">Buku Panduan</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="bahan.html" target="blank">Bahan Video</a>
+                    <a class="nav-link">Bahan Video</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://drive.google.com/folderview?id=1VrZJhs44oFRWyBgg2_iaujB9bzyqoOq3" target="blank">Upload Video</a>
+                    <a class="nav-link">Upload Video</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle disabled" href="#" id="dropdown07" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown07">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -107,81 +121,43 @@
         </header>
 
         <!-- content -->
-    <div class="containr">
-        <div class="card">
-            <div class="circle">
-                <h4>QIROATUL AKHBAR</h4>
-            </div>
-            <div class="content" style="display:inline-block;">
-                <a href="https://bit.ly/PARBARAQiroatulAkhbar21" target="blank">Daftar</a>
-                <a href="https://wa.me/6285867138057" target="blank">Contact Person</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="circle">
-                <h4>QIROATUS SYI'IR</h4>
-            </div>
-            <div class="content">
-                <a href="https://bit.ly/PARBARAQirotusSyiir21" target="blank">Daftar</a>
-                <a href="https://wa.me/6285701857391" target="blank">Contact Person</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="circle">
-                <h4>ESSAY BAHASA ARAB</h4>
-            </div>
-            <div class="content">
-                <a href="https://bit.ly/PARBARAESSAY21" target="blank">Daftar</a>
-                <a href="https://wa.me/6281391822547" target="blank">Contact Person</a>
-            </div>
-        </div>
-      <div class="card">
-            <div class="circle">
-                <h4>GHINA' ARABY</h4>
-            </div>
-            <div class="content">
-                <a href="https://bit.ly/PARBARAGHINA21" target="blank">Daftar</a>
-                <a href="https://wa.me/6285877593713" target="blank">Contact Person</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="circle">
-                <h4>KALIGRAFI DEKORASI</h4>
-            </div>
-            <div class="content">
-                <a href="https://bit.ly/PARBARAKALIGRAFI21" target="blank">Daftar</a>
-                <a href="https://wa.me/6285848182711" target="blank">Contact Person</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="circle">
-                <h4>MQK</h4>
-            </div>
-            <div class="content">
-                <a href="https://bit.ly/PARBARAMQK21" target="blank">Daftar</a>
-                <a href="https://wa.me/6282117177202" target="blank">Contact Person</a>
-            </div>
-        </div>
-    </div>
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="container">
-          <h3>PARADE BAHASA ARAB</h3>
-          <p></p>
-          <div class="social-links">
-            <a href="https://twitter.com/IPNUKotaBatik/" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="https://facebook.com/IpnuIppnuKotaBatik/" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/ipnuippnukotabatik/" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.youtube.com/user/IPNUKotaBatik/" class="youtube"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="mail-send"><i class="bi bi-envelope"></i></a>
-          </div>
-          <div class="copyright">
-            &copy; 2021 Copyright <strong><span>parbara | HMJ PBA IAIN PEKALONGAN </span></strong> | All Rights Reserved
-          </div>
-        </div>
-      </footer><!-- End Footer -->
+        <form id="labnol">
 
-    <!-- Bootstrap core JS-->
+            <!-- Text input fields -->
+            <input type="text" id="nameField" name="myName" placeholder="Your name..">
+            <input type="email" id="emailField" name="myEmail" placeholder="Your email..">
+          
+            <!-- File input filed -->
+            <input type="file" name="myFile">
+          
+            <!-- The submit button. It calls the server side function uploadfiles() on click -->
+            <input type="submit" id="uploadFileButton" value="Upload File"
+            onclick="this.value='Uploading..';uploadFile();return false;">
+                   
+          
+          </form>
+          
+          <!-- Here the results of the form submission will be displayed -->
+          <div id="output"></div>
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+          <div class="container">
+            <h3>PARADE BAHASA ARAB</h3>
+            <p></p>
+            <div class="social-links">
+              <a href="https://twitter.com/IPNUKotaBatik/" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="https://facebook.com/IpnuIppnuKotaBatik/" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/ipnuippnukotabatik/" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.youtube.com/user/IPNUKotaBatik/" class="youtube"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="mail-send"><i class="bi bi-envelope"></i></a>
+            </div>
+            <div class="copyright">
+              &copy; 2021 Copyright <strong><span>parbara | HMJ PBA IAIN PEKALONGAN </span></strong> | All Rights Reserved
+            </div>
+          </div>
+        </footer><!-- End Footer -->
+        <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
